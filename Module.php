@@ -4,6 +4,7 @@ namespace Blog;
 
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
+use Blog\Model\PostTable;
 
 class Module implements AutoloaderProviderInterface
 {
@@ -34,5 +35,18 @@ class Module implements AutoloaderProviderInterface
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+    }
+    
+    public function getServiceConfig()
+    {
+        return array(
+            'factories' => array(
+                'Blog\Model\PostTable' =>  function($sm) {
+                    $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                    $table     = new PostTable($dbAdapter);
+                    return $table;
+                },
+            ),
+        );
     }
 }
