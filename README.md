@@ -42,3 +42,18 @@ Sequence Diagrams
 **Admin delete post**
 
 ![Sequence Diagram](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQWRtaW4gZGVsZXRlcyBwb3N0CgoADwUtPlBvc3RDb250cm9sbGVyOgAkB3JlcXVlc3RzIGxpc3Qgb2YALwVzCm5vdGUgcmlnaAAPBQArEAA9DiByZXRyaWV2ZQA2DyBmcm9tIHRoZSBkYXRhYmFzZQoAdg4tPgCBKgU6IERpc3BsYXkAMBBzdG9yZWQgaW4ANw4AgRcFbGVmAIEqBQA7BwCBcgZzZWxlY3QAgXIGIHRvAIIBBwCBaRhEAIIhBQAnBlIAggEGAIFKLgCCWwwAgWcGAIEWDgCBKYEXCg&s=napkin)
+
+Visitor/User available pages
+----------------------------
+
++ Index page (of module): displays all blog posts on chronological order.
++ Posts by label: List of all blog posts in a specific category.
++ Post view page: displays a specific post with comments powered by Disqus.
+
+Admin available pages
+---------------------
+
++ All Visitor/User pages (with admin controls, when logged in as admin).
++ Create a new blog post and associate a label.
++ Edit a blog post and modify labels (if required).
++ Delete a blog post.
