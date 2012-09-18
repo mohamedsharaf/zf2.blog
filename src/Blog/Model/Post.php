@@ -2,7 +2,12 @@
 
 namespace Blog\Model;
 
-class Post
+use Zend\InputFilter\Factory as InputFactory;
+use Zend\InputFilter\InputFilter;
+use Zend\InputFilter\InputFilterAwareInterface;
+use Zend\InputFilter\InputFilterInterface;
+
+class Post implements InputFilterAwareInterface
 {
     public $id;
     public $title;
@@ -76,5 +81,10 @@ class Post
         }
 
         return $this->inputFilter;
+    }
+    
+    public function getArrayCopy()
+    {
+        return get_object_vars($this);
     }
 }

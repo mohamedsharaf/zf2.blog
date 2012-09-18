@@ -8,8 +8,7 @@ $this->headTitle($title);
 ?>
 <h1><?php echo $this->escapeHtml($title); ?></h1>
 
-<p><a href="<?php echo $this->url('blog', array(
-        'action'=>'add'));?>">Add new post</a></p>
+<p><a href="/blog/post/add">Add new post</a></p>
 
 <table class="table">
 <tr>
@@ -21,10 +20,8 @@ $this->headTitle($title);
 <tr>
     <td><?php echo $this->escapeHtml($post->title);?></td>
     <td><?php echo $this->escapeHtml($post->body);?></td>    <td>
-        <a href="<?php echo $this->url('blog',
-            array('action'=>'edit', 'id' => $post->id));?>">Edit</a>
-        <a href="<?php echo $this->url('blog',
-            array('action'=>'delete', 'id' => $post->id));?>">Delete</a>
+        <a href="/blog/post/edit/<?php echo $post->id; ?>">Edit</a>
+        <a href="/blog/post/delete/<?php echo $post->id; ?>">Delete</a>
     </td>
 </tr>
 <?php endforeach; ?>
