@@ -3,6 +3,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Blog\Controller\View' => 'Blog\Controller\ViewController',
+            'Blog\Controller\Post' => 'Blog\Controller\PostController',
         ),
     ),
     'router' => array(
