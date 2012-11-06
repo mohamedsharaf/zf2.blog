@@ -1,7 +1,7 @@
 zf2.blog
 ========
 
-Zend Framework 2 Blog Module
+A Basic Zend Framework 2 Blog Module
 
 Functional Specification
 ========================
