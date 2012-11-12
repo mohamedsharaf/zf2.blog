@@ -28,16 +28,17 @@ return array(
                     // you may want to remove it and replace it with more
                     // specific routes.
                     'default' => array(
-                        'type'    => 'Segment',
-                        'options' => array(
-                            'route'    => '/[:controller[/:action]]',
-                            'constraints' => array(
-                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                            ),
-                        ),
+                    'type'    => 'Segment',
+	                    'options' => array(
+	                        'route'    => '[/:controller[/:action[/:id]]]',
+	                        'constraints' => array(
+	                            'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+	                            'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+	                        ),
+	                        'defaults' => array(
+	                            'id'  => '0'
+	                        ),
+	                    ),
                     ),
                 ),
             ),

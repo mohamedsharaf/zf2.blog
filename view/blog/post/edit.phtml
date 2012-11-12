@@ -7,7 +7,7 @@ $this->headTitle($title);
 
 <?php
 $form = $this->form;
-$form->setAttribute('action', '/blog/post/edit/id/'. $this->id));
+$form->setAttribute('action', '/blog/post/edit/'. $this->id);
 $form->prepare();
 
 echo $this->form()->openTag($form);
